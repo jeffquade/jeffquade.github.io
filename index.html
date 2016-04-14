@@ -233,7 +233,199 @@
               <!-- Portfolio Tab Data -->
                 <div id="portfolio">
                     <section class="clearfix">
-                        <div class="g1">
+                    
+
+
+<!-- Container -->
+<div id="container" align="center" style="/*height:640px; min-height:640px;*/"><br />
+  <h1>Portfolio</h1>
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100">&nbsp;</td>
+    <td width="600"><div align="center">
+    <span style="font-size:9px; font-family:Arial, Helvetica, sans-serif;" id="spanNumberTop">
+    &nbsp;
+    </span></div></td>
+    <td width="100">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+    <div align="right">
+    <a href="javascript:jsGoBack();" 
+        onmouseover="document.getElementById('theLeftButton').src='assets/images/arrow-left-shadow.png';" 
+        onmouseout="document.getElementById('theLeftButton').src='assets/images/arrow-left.png';"
+        style="text-decoration:none;";
+    >
+    &nbsp;
+    <img src="assets/images/arrow-left.png" width="64" height="64" id="theLeftButton" />
+    </a>
+    &nbsp;
+    
+
+    </div>
+    </td>
+    
+    
+    <td>
+    <div align="center" style="width:100%; height:400px;">
+
+ <div align="center" style="height:400px;" id="theImageDiv">
+    </div>
+    
+    </div>
+    </td>
+    
+    
+    <td><div align="left">
+    <a href="javascript:jsGoNext();"
+        onmouseover="document.getElementById('theRightButton').src='assets/images/arrow-right-shadow.png';" 
+        onmouseout="document.getElementById('theRightButton').src='assets/images/arrow-right.png';"
+        style="text-decoration:none;";    
+    >&nbsp;<img src="assets/images/arrow-right.png" width="64" height="64" id="theRightButton" /></a></div></td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td><div align="center"><span style="font-size:9px; font-family:Arial, Helvetica, sans-serif;" id="spanNumber">
+    &nbsp;
+    </span></div>
+    <div align="left" style="margin:50px; margin-top:20px; height:40px; min-height:40px;">
+        <strong><span id="theTitle">NOTE</span></strong> - 
+        <span id="theDescription">Please enable JavaScript to view this portfolio.</span></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+var vShowItemNumber = false;
+var vPicName = new Array();
+var vPicTitle = new Array();
+var vPicDescription = new Array();
+var varIndex = 0;
+
+vPicName[varIndex]="01_Authorize.netCIM.jpg";
+vPicTitle[varIndex] = "Authorize.net CIM";
+vPicDescription[varIndex] = "This was a custom Authorize.net CIM built for an osCommerce shopping cart. CIM allows customers to save their credit card information on a secure server, eliminating the need to re-enter their data on their next visit.";
+varIndex++;
+
+vPicName[varIndex]="02_Merrill_Mobile.png";
+vPicTitle[varIndex] = "Mobile Site";
+vPicDescription[varIndex] = "This is a mobile site built from scratch using no templates, custom written in PHP and JavaScript.";
+varIndex++;
+
+vPicName[varIndex]="10_ChessMate.png";
+vPicTitle[varIndex] = "Chess Game Written in C";
+vPicDescription[varIndex] = "This was written in C for Classic Mac back in the 1990s. The floating menus were written in Pascal.";
+varIndex++;
+
+vPicName[varIndex]="06_HTML5_Video.jpg";
+vPicTitle[varIndex] = "HTML5 Video";
+vPicDescription[varIndex] = "The original video file here was converted to HTML5, it also includes fall back Flash video for older browsers. Will play on any device, including mobile ones.";
+varIndex++;
+
+vPicName[varIndex]="03_Henry_Photoshopped.png";
+vPicTitle[varIndex] = "Photoshopped Photo";
+vPicDescription[varIndex] = "This is a photo which was touched up and had a halftone pattern border added using Photoshop CS5.";
+varIndex++;
+
+vPicName[varIndex]="02_Bufords.png";
+vPicTitle[varIndex] = "Restaurant Website";
+vPicDescription[varIndex] = "Here's a small site built for a local client. The MySQL backend allowed the users to add and edit menu items.";
+varIndex++;
+
+vPicName[varIndex]="04_Dales_Photography.png";
+vPicTitle[varIndex] = "Wordpress Site";
+vPicDescription[varIndex] = "This is a Wordpress website build for a professional photographer.";
+varIndex++;
+
+vPicName[varIndex]="05_Jeffs_Illustrator_CD.png";
+vPicTitle[varIndex] = "Graphic Created in Illustrator";
+vPicDescription[varIndex] = "This is a vector graphic created using Adobe Illustrator CS4.";
+varIndex++;
+
+
+vPicName[varIndex]="07_HenryTheCat.png";
+vPicTitle[varIndex] = "Photo of Henry the Cat";
+vPicDescription[varIndex] = "This is a photo taken with a Samsung camcorder.";
+varIndex++;
+
+vPicName[varIndex]="08_Cabelas_InDesign.png";
+vPicTitle[varIndex] = "InDesign Ad for Cabela's";
+vPicDescription[varIndex] = "This advertisement was created using Adobe InDesign CS4.";
+varIndex++;
+
+vPicName[varIndex]="09_Wellprodirect.png";
+vPicTitle[varIndex] = "Shopping Cart";
+vPicDescription[varIndex] = "This is a Cartweaver shopping cart site built for a client, complete with automatic shipping and sales tax calculations.";
+varIndex++;
+
+vPicName[varIndex]="12_GIJeff.jpg";
+vPicTitle[varIndex] = "G.I. Jeff Handout";
+vPicDescription[varIndex] = "Here is a piece created in InDesign for a tech speech.";
+varIndex++;
+
+vPicName[varIndex]="11_Moon.jpg";
+vPicTitle[varIndex] = "Lunar Photo";
+vPicDescription[varIndex] = "This photo was taken using a 500mm lense.";
+varIndex++;
+
+var vCurrentIndex=0;
+
+function jsGoBack() {
+	// Restart loop
+	if (vCurrentIndex==0)
+		vCurrentIndex=vPicName.length;
+		
+if (vCurrentIndex>0) {
+		vCurrentIndex--;
+	//	if (vShowItemNumber) document.getElementById("spanNumber").innerHTML=(vCurrentIndex+1)+" of "+vPicTitle.length;
+		
+		$('#theImageDiv').fadeOut(200,function(){
+		document.getElementById("theImageDiv").innerHTML="<img src='assets/images/portfolio_new/"+vPicName[vCurrentIndex]+"' />";			
+    $('#theImageDiv').fadeIn(200);
+});
+
+		jsSetText();
+	} //<img src='assets/images/portfolio_new/"+vPicName[vCurrentIndex]+' />
+}
+
+function jsGoNext() {
+	// Restart loop
+	if ((vCurrentIndex+1)==vPicName.length)
+		vCurrentIndex=-1;
+		
+	if ((vCurrentIndex+1)<vPicName.length) { // (7+1)<9   (8+1)<9 
+		vCurrentIndex++;
+	//	if (vShowItemNumber) document.getElementById("spanNumber").innerHTML=(vCurrentIndex+1)+" of "+vPicTitle.length;
+		
+		$('#theImageDiv').fadeOut(200,function(){
+		document.getElementById("theImageDiv").innerHTML="<img src='assets/images/portfolio_new/"+vPicName[vCurrentIndex]+"' />";			
+    $('#theImageDiv').fadeIn(200);
+});
+		
+		jsSetText();
+	}
+}
+
+function jsSetText() {
+	document.getElementById("theTitle").innerHTML=vPicTitle[vCurrentIndex];
+	document.getElementById("theDescription").innerHTML=vPicDescription[vCurrentIndex];
+	if(vShowItemNumber) 
+		document.getElementById("spanNumber").innerHTML=1+" of "+vPicTitle.length;
+}
+
+	$(document).ready(function(){ 
+		document.getElementById("theImageDiv").innerHTML="<img src='assets/images/portfolio_new/"+vPicName[vCurrentIndex]+"' />";
+		jsSetText();
+	});
+
+</script>                    
+                        <!--div class="g1">
                             <div class="image">
                                 <img src="http://www.jeffquade.net/assets/images/portfolio_new/02_Merrill_Mobile.png" alt="">
                                 <div class="image-overlay">
@@ -244,7 +436,7 @@
                             </div>
                         </div>
                         
-                        <!--div class="g1">
+                        <div class="g1">
                             <div class="image">
                                 <img src="http://lorempixel.com/306/306/sports/2" alt="">
                                 <div class="image-overlay">

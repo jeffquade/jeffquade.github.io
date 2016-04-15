@@ -2,7 +2,7 @@
 
 ====================
 
-## This is Jeff's Online Portfolio
+## This is Jeff's Portfolio
 
 Thanks for visiting my homepage at:
 
